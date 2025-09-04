@@ -1,0 +1,143 @@
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/967700000000?text=مرحبًا%20NLT%20-%20أرغب%20بالتواصل" class="whatsapp-float" target="_blank"
+  rel="noopener" aria-label="Contact on Whastapp">
+  <!-- أيقونة واتساب SVG -->
+  <svg viewBox="0 0 32 32" aria-hidden="true" class="wa-icon">
+    <path
+      d="M19.11 17.27c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.64.07-.3-.15-1.24-.46-2.36-1.48-.87-.78-1.46-1.73-1.63-2.02-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35zM16.06 28C9.96 28 5 23.04 5 16.94 5 10.85 9.96 5.88 16.06 5.88c6.1 0 11.06 4.97 11.06 11.06 0 6.1-4.97 11.06-11.06 11.06zm0-24.13C8.86 3.87 3.06 9.68 3.06 16.88c0 2.4.64 4.65 1.77 6.6L3 29l5.64-1.78c1.9 1.04 4.08 1.64 6.42 1.64 7.2 0 13.01-5.81 13.01-13.01S23.26 3.87 16.06 3.87z" />
+  </svg>
+  <span class="wa-tooltip">Contact on Whastapp</span>
+</a>
+
+<style>
+  /* Floating WhatsApp Button */
+  .whatsapp-float {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9999;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d7c66;
+    color: #fff;
+    text-decoration: none;
+    box-shadow:
+      0 0 12px rgba(13, 124, 102, 0.55),
+      /* توهج خارجي دائم */
+      0 0 24px rgba(13, 124, 102, 0.35);
+    /* طبقة إضافية ناعمة */
+    transition: transform .2s ease, box-shadow .3s ease, background .2s ease;
+  }
+
+  /* أيقونة */
+  .whatsapp-float .wa-icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+    /* توهج بسيط للأيقونة */
+  }
+
+  /* Hover Effect */
+  .whatsapp-float:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: #0b6f5c;
+    box-shadow:
+      0 0 16px rgba(13, 124, 102, 0.7),
+      0 0 36px rgba(13, 124, 102, 0.45);
+  }
+
+/* Tooltip */
+.wa-tooltip{
+  position: absolute;
+  right: 72px;
+  bottom: 50%;
+  transform: translateY(50%) scale(.95); /* أصغر شوية قبل الظهور */
+  transform-origin: right center;
+  background: rgba(16, 11, 29, .92);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease, text-shadow .3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+/* عند الظهور */
+.whatsapp-float:hover .wa-tooltip{
+  opacity: 1;
+  transform: translateY(50%) scale(1); /* يكبر تدريجياً */
+  text-shadow: 
+    0 0 6px rgba(13,124,102,0.8),
+    0 0 14px rgba(13,124,102,0.6);
+}
+
+
+  /* نبضة خفيفة مستمرة (Glow Pulse) */
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 0 12px rgba(13, 124, 102, 0.55), 0 0 24px rgba(13, 124, 102, 0.35);
+    }
+
+    50% {
+      box-shadow: 0 0 18px rgba(13, 124, 102, 0.75), 0 0 40px rgba(13, 124, 102, 0.5);
+    }
+
+    100% {
+      box-shadow: 0 0 12px rgba(13, 124, 102, 0.55), 0 0 24px rgba(13, 124, 102, 0.35);
+    }
+  }
+
+  .whatsapp-float {
+    animation: glowPulse 3s infinite ease-in-out;
+  }
+
+  /* أصغر شاشات */
+  @media (max-width: 480px) {
+    .whatsapp-float {
+      right: 14px;
+      bottom: 14px;
+      width: 56px;
+      height: 56px;
+    }
+
+    .whatsapp-float .wa-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const phone = "967773030069"; // <-- رقمك الدولي
+    const base = "https://wa.me/";
+    const preset = "Hello NLT - I would like to contact regarding: ";
+    const pageTitle = document.title || "NLT";
+    const msg = encodeURIComponent(preset + pageTitle);
+    const waHref = `${base}${phone}?text=${msg}`;
+
+    const a = document.createElement("a");
+    a.href = waHref;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.className = "whatsapp-float";
+    a.setAttribute("aria-label", "Contact on Whastapp");
+
+    a.innerHTML = `
+      <svg viewBox="0 0 32 32" aria-hidden="true" class="wa-icon">
+        <path d="M19.11 17.27c-.3-.15-1.76-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.64.07-.3-.15-1.24-.46-2.36-1.48-.87-.78-1.46-1.73-1.63-2.02-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35zM16.06 28C9.96 28 5 23.04 5 16.94 5 10.85 9.96 5.88 16.06 5.88c6.1 0 11.06 4.97 11.06 11.06 0 6.1-4.97 11.06-11.06 11.06zm0-24.13C8.86 3.87 3.06 9.68 3.06 16.88c0 2.4.64 4.65 1.77 6.6L3 29l5.64-1.78c1.9 1.04 4.08 1.64 6.42 1.64 7.2 0 13.01-5.81 13.01-13.01S23.26 3.87 16.06 3.87z"/>
+      </svg>
+      <span class="wa-tooltip">Contact on Whastapp</span>
+    `;
+    document.body.appendChild(a);
+  })();
+</script>
