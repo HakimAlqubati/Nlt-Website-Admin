@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $this->call([
-            // FeatureSeeder::class,
-            // FaqSeeder::class,
-            // ChooseItemSeeder::class,
-            // TestimonialSeeder::class,
+            FeatureSeeder::class,
+            FaqSeeder::class,
+            ChooseItemSeeder::class,
+            TestimonialSeeder::class,
             TopSectionSeeder::class,
         ]);
     }
