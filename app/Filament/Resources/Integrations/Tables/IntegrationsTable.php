@@ -19,8 +19,8 @@ class IntegrationsTable
             ->columns([
                 TextColumn::make('title')
                     ->searchable(),
-                ImageColumn::make('image_path_1'),
-                ImageColumn::make('image_path_2'),
+                ImageColumn::make('image_path_1')->disk('public'),
+                ImageColumn::make('image_path_2')->disk('public'),
                 TextColumn::make('circle_position')
                     ->searchable(),
                 TextColumn::make('sort_order')
