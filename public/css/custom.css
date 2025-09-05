@@ -199,7 +199,46 @@ textarea.w-input:focus {
     }
 }
 
-.form-block-demo-request{
+.form-block-demo-request {
     width: 100% !important;
     max-width: 100% !important;
+}
+
+.demo-invite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 8px;
+}
+
+.demo-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.demo-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 250px;
+}
+
+.demo-open-btn {
+    background-color: #0d7c66;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.demo-open-btn:hover {
+    background-color: #0a5f4f;
 }

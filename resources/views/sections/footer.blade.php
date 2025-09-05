@@ -50,14 +50,10 @@
 
                     </div>
                 </div>
-                <div id="w-node-_863e0dbd-a486-b887-26e7-78721ea2463f-1ea245e2" class="footer-wrap">
-                    <p class="footer-nav-title">Request a Demo</p>
-                    <!-- زر تشغيل المودال -->
-                    <button id="open-demo-modal" class="demo-open-btn">Request a Demo</button>
-
-
-
-
+                <div id="w-node-_863e0dbd-a486-b887-26e7-78721ea2463f-1ea245e2" class="footer-wrap demo-invite">
+                    <h4 class="demo-title">Experience the Power of NLT</h4>
+                    <p class="demo-subtitle">Discover how our solutions can elevate your business.</p>
+                    <button id="open-demo-modal" class="demo-open-btn">Request Your Demo</button>
                 </div>
 
             </div>
