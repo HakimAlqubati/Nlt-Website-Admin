@@ -18,9 +18,9 @@ class FeaturesTable
         return $table
             ->columns([
                 TextColumn::make('sort_order')
-                    ->numeric()
+                    ->numeric()->alignCenter()
                     ->sortable(),
-                TextColumn::make('section_number')
+                TextColumn::make('section_number')->alignCenter()
                     ->searchable(),
                 TextColumn::make('title')
                     ->searchable(),

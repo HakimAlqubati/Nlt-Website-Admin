@@ -14,17 +14,17 @@ class FaqsTable
 {
     public static function configure(Table $table): Table
     {
-        return $table
+        return $table->striped()
             ->columns([
                 TextColumn::make('sort_order')
-                    ->numeric()
+                    ->numeric()->alignCenter()
                     ->sortable(),
                 TextColumn::make('section_number')
-                    ->searchable(),
+                    ->searchable()->alignCenter(),
                 TextColumn::make('question')
                     ->searchable(),
                 IconColumn::make('is_active')
-                    ->boolean(),
+                    ->boolean()->alignCenter(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
