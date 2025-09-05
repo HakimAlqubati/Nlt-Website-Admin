@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\Testimonials\Tables;
+namespace App\Filament\Resources\Integrations\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -11,22 +11,21 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class TestimonialsTable
+class IntegrationsTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('author_name')
+                TextColumn::make('title')
                     ->searchable(),
-                TextColumn::make('author_email')
+                ImageColumn::make('image_path_1'),
+                ImageColumn::make('image_path_2'),
+                TextColumn::make('circle_position')
                     ->searchable(),
-                ImageColumn::make('author_image')    ->disk('public')->alignCenter(),
-                TextColumn::make('testimonial_date')
-                    ->date()
+                TextColumn::make('sort_order')
+                    ->numeric()
                     ->sortable(),
-                TextColumn::make('group_class')
-                    ->searchable(),
                 IconColumn::make('is_active')
                     ->boolean(),
                 TextColumn::make('created_at')

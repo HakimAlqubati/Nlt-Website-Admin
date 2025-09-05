@@ -23,7 +23,7 @@
                                     <div class="author-content _01">
                                         <div class="testimonial-author-image-block _01">
                                             <img loading="lazy"
-                                                src="{{ asset($testimonial->author_image ?? 'images/default.jpg') }}"
+                                                src="{{ asset('storage/'.$testimonial->author_image ?? 'images/default.jpg') }}"
                                                 alt="{{ $testimonial->author_name }}"
                                                 class="testimonial-author-image">
                                         </div>

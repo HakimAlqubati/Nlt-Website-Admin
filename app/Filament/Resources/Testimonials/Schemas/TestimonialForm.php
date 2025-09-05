@@ -20,8 +20,13 @@ class TestimonialForm
                 TextInput::make('author_email')
                     ->email()
                     ->default(null),
+
                 FileUpload::make('author_image')
-                    ->image(),
+                    ->label('Author Image')
+                    ->image()
+                    ->disk('public')
+                    ->directory('testimonials')
+                    ->visibility('public'),
                 Textarea::make('content')
                     ->required()
                     ->columnSpanFull(),

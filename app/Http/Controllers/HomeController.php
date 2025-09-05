@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Feature;
 use App\Models\Faq;
 use App\Models\ChooseItem;
+use App\Models\Integration;
 use App\Models\Partner;
 use App\Models\Testimonial;
 use App\Models\TopSection;
@@ -40,6 +41,9 @@ class HomeController extends Controller
         $partners = Partner::where('is_active', true)
             ->orderBy('sort_order')
             ->get();
+        $integrations = Integration::where('is_active', true)
+            ->orderBy('sort_order')
+            ->get();
         return view('home', compact(
             'features',
             'featureSection',
@@ -49,6 +53,7 @@ class HomeController extends Controller
             'testimonialsGrouped',
             'topSection',
             'partners',
+            'integrations',
         ));
     }
 }
