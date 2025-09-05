@@ -2,6 +2,7 @@
 
 namespace App\Filament\Widgets;
 
+use Filament\Schemas\Components\Fieldset;
 use Filament\Support\Icons\Heroicon;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;   // ✅ الكلاس الصحيح
@@ -36,20 +37,22 @@ class SiteStatsOverview extends BaseWidget
         );
 
         return [
-            Stat::make('FAQs', number_format($faqsCount))->color('primary')
-                ->icon('heroicon-o-question-mark-circle'),
+            Fieldset::make()->columnSpanFull()->columns(2)->schema([
 
-            Stat::make('Testimonials', number_format($testimonialsCount))
-                ->icon('heroicon-o-chat-bubble-left-ellipsis'),
+                Stat::make('FAQs', number_format($faqsCount))->color('primary')
+                    ->icon('heroicon-o-question-mark-circle'),
 
-            Stat::make('Integrations', number_format($integrationsCount))
-                ->icon('heroicon-o-rectangle-stack')->extraAttributes(['class' => 'bg-purple-600 text-white rounded-lg shadow']),
+                Stat::make('Testimonials', number_format($testimonialsCount))
+                    ->icon('heroicon-o-chat-bubble-left-ellipsis'),
 
+                Stat::make('Integrations', number_format($integrationsCount))
+                    ->icon('heroicon-o-rectangle-stack')->extraAttributes(['class' => 'bg-purple-600 text-white rounded-lg shadow']),
 
-
-
-            Stat::make('Features', number_format($totalFeaturs))
-                ->icon(Heroicon::OutlinedSparkles),
+                Stat::make('Features', number_format($totalFeaturs))
+                    ->icon(Heroicon::OutlinedSparkles)->extraAttributes([
+                        'class' => 'aspect-square flex flex-col justify-center items-center text-center bg-indigo-600 text-white rounded-lg shadow',
+                    ]),
+            ]),
         ];
     }
 }
