@@ -3,11 +3,13 @@
         <div class="title-wrap features">
             <div data-w-id="a88efbf6-fb3f-d57b-a22c-630b4d8e93d7" style="opacity:0" class="top-title-wrap features">
                 <div class="sub-title-wrap">
-                    <div>{{ optional($features->first())->section_number ?? '01' }}</div>
+                    <div>{{ $featureSection->section_number ?? '01' }}</div>
                 </div>
-                <div>Key Features</div>
+                <div>{{ $featureSection->subtitle ?? 'Key Features' }}</div>
             </div>
-            <h2 data-animation="chars" class="title key-features">All-in-One Sales &amp; Engagement, Reimagined</h2>
+            <h2 data-animation="chars" class="title key-features">
+                {{ $featureSection->title ?? 'Test Feature Title' }}
+            </h2>
         </div>
 
         <div class="key-features-wraaper">
@@ -25,8 +27,8 @@
 
                 <div data-w-id="{{ $wrapId }}" class="key-features-wrap">
                     {{-- @if ($feature->image_path) --}}
-                        <img src="{{ asset('storage/' . $feature->image_path) }}"
-                            alt="{{ $feature->image_alt ?? $feature->title }}">
+                    <img src="{{ asset('storage/' . $feature->image_path) }}"
+                        alt="{{ $feature->image_alt ?? $feature->title }}">
                     {{-- @endif --}}
 
                     <div class="key-features-text-content {{ $index === 3 ? 'v1' : '' }}">

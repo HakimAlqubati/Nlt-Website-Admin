@@ -25,12 +25,17 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+        ->brandName('Nlt-Website Admin')
+        ->favicon(asset('images/logo/nlt-filled-text.png'))
+            ->brandLogo(asset('images/logo/nlt-filled-text.png'))
+            ->darkModeBrandLogo(asset('images/logo/nlt-white-text.png'))
+            ->brandLogoHeight('3.5rem')
             ->default()
             ->id('admin')
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Green,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
@@ -58,9 +63,9 @@ class AdminPanelProvider extends PanelProvider
             ])
              ->maxContentWidth(Width::Full)
               ->spa(hasPrefetching: true)
-            //   ->sidebarCollapsibleOnDesktop()
-            //   ->sidebarFullyCollapsibleOnDesktop()
-              ->topNavigation()
+              ->sidebarCollapsibleOnDesktop()
+              ->sidebarFullyCollapsibleOnDesktop(false)
+            //   ->topNavigation()
             ;
     }
 }

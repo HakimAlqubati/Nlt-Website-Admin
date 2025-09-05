@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Features\Schemas;
 
+use App\Models\Feature;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -17,7 +18,9 @@ class FeatureForm
                 TextInput::make('sort_order')
                     ->required()
                     ->numeric()
-                    ->default(1),
+                    ->default(function () {
+                        return Feature::max('sort_order') + 1;
+                    }),
                 TextInput::make('section_number')
                     ->default(null),
                 TextInput::make('title')

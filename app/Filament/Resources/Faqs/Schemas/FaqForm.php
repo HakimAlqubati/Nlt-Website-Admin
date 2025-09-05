@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Faqs\Schemas;
 
+use App\Models\Faq;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
@@ -16,7 +17,9 @@ class FaqForm
                 TextInput::make('sort_order')
                     ->required()
                     ->numeric()
-                    ->default(1),
+                    ->default(function () {
+                        return Faq::max('sort_order') + 1;
+                    }),
                 TextInput::make('section_number')
                     ->default(null),
                 TextInput::make('question')

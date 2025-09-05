@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\ChooseItems\Schemas;
 
+use App\Models\ChooseItem;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -17,7 +18,9 @@ class ChooseItemForm
                 TextInput::make('sort_order')
                     ->required()
                     ->numeric()
-                    ->default(1),
+                    ->default(function () {
+                        return ChooseItem::max('sort_order') + 1;
+                    }),
                 Select::make('row')
                     ->options(['top' => 'Top', 'bottom' => 'Bottom'])
                     ->default('top')
