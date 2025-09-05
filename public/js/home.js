@@ -13,3 +13,6 @@ window.addEventListener('click', function (event) {
         modal.style.display = 'none';
     }
 });
+
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();

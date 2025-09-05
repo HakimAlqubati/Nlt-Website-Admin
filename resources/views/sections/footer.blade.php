@@ -18,7 +18,7 @@
                     </p>
                 </div>
                 <div data-w-id="863e0dbd-a486-b887-26e7-78721ea245e5" class="footer-wrap">
-                    <p class="footer-nav-title">Product</p>
+                    <p class="footer-nav-title"> </p>
                     <div class="footer-item-wrap">
                         <a href="#about" class="footer-menu w-inline-block">
                             <div class="footer-menu-wrap">
@@ -60,9 +60,7 @@
             <div data-w-id="863e0dbd-a486-b887-26e7-78721ea24667" class="footer-bottom-wrapper">
                 <div data-w-id="863e0dbd-a486-b887-26e7-78721ea24679" class="footer-copy-wrap">
                     <p class="copy-text">
-                        © 2025 <a href="#home" aria-current="page" class="link w--current">Next Level Tech
-                            (NLT)</a>.
-                        All rights reserved. Crafted with innovation and excellence by NLT Team.
+                        © <span id="currentYear"></span> Next Level Tech. All rights reserved.
                     </p>
                 </div>
 
