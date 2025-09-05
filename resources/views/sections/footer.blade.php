@@ -1,3 +1,6 @@
+<style>
+
+</style>
 <div class="footer-wraps" id="contact">
 
     <section class="section footer">
@@ -49,59 +52,20 @@
                 </div>
                 <div id="w-node-_863e0dbd-a486-b887-26e7-78721ea2463f-1ea245e2" class="footer-wrap">
                     <p class="footer-nav-title">Request a Demo</p>
+                    <!-- زر تشغيل المودال -->
+                    <button id="open-demo-modal" class="demo-open-btn">Request a Demo</button>
 
-                    <div class="form-block w-form">
-                        <form method="POST" action="{{ route('demo.request.store') }}" class="w-clearfix" novalidate>
-                            @csrf
 
-                            <h4 class="newsletter-sub-text">See how NLT can work for your business</h4>
 
-                            {{-- Honeypot (مكافحة سبام بسيطة) --}}
-                            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
 
-                            <div class="email-input-wrap" style="gap:12px; flex-wrap:wrap">
-                                <input class="email-input-box w-input" type="text" name="name"
-                                    placeholder="Your name" value="{{ old('name') }}" required>
-                                <input class="email-input-box w-input" type="email" name="email"
-                                    placeholder="Work email" value="{{ old('email') }}" required>
-                                <input class="email-input-box w-input" type="text" name="company"
-                                    placeholder="Company" value="{{ old('company') }}" required>
-                                <input class="email-input-box w-input" type="tel" name="phone"
-                                    placeholder="Phone (optional)" value="{{ old('phone') }}">
-
-                                <textarea class="email-input-box w-input" name="message" placeholder="What do you want to achieve? (optional)"
-                                    rows="3" style="width:100%">{{ old('message') }}</textarea>
-
-                                <input type="submit" class="email-btn w-button" value="Request Demo">
-                            </div>
-                        </form>
-
-                        @if ($errors->any())
-                            <div class="error-message w-form-fail" style="display:block">
-                                <div>
-                                    Oops! Please fix the following:
-                                    <ul style="margin-top:6px">
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
-                        @endif
-
-                        @if (session('status') === 'demo-requested')
-                            <div class="success-message w-form-done" style="display:block">
-                                <div>Thanks! Our team will contact you shortly to schedule your demo.</div>
-                            </div>
-                        @endif
-                    </div>
                 </div>
 
             </div>
             <div data-w-id="863e0dbd-a486-b887-26e7-78721ea24667" class="footer-bottom-wrapper">
                 <div data-w-id="863e0dbd-a486-b887-26e7-78721ea24679" class="footer-copy-wrap">
                     <p class="copy-text">
-                        © 2025 <a href="#home" aria-current="page" class="link w--current">Next Level Tech (NLT)</a>.
+                        © 2025 <a href="#home" aria-current="page" class="link w--current">Next Level Tech
+                            (NLT)</a>.
                         All rights reserved. Crafted with innovation and excellence by NLT Team.
                     </p>
                 </div>
@@ -138,9 +102,62 @@
                 </div>
             </div>
         </div>
-        <div class="footer-logo-wrap">
+        {{-- <div class="footer-logo-wrap">
             <img src="images/custom/Next-Level-Tech-Logo.svg" loading="lazy"
                 data-w-id="413a3482-7e02-8892-f7d5-858cde5e0184" alt="NLT Logo">
-        </div>
+        </div> --}}
     </section>
+</div>
+
+<!-- المودال -->
+<div id="demoModal" class="demo-modal">
+    <div class="demo-modal-content">
+        <span class="demo-modal-close" id="close-demo-modal">&times;</span>
+
+        <!-- ✅ نموذج الفورم كما هو -->
+        <div class="form-block w-form form-block-demo-request">
+            <form method="POST" action="{{ route('demo.request.store') }}" class="form-layout" novalidate>
+                @csrf
+                <h4 class="newsletter-sub-text">See how NLT can work for your business</h4>
+
+                <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input class="w-input" type="text" name="name" id="name" placeholder="Your name"
+                            value="{{ old('name') }}" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Work Email</label>
+                        <input class="w-input" type="email" name="email" id="email"
+                            placeholder="Work email" value="{{ old('email') }}" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="company">Company</label>
+                        <input class="w-input" type="text" name="company" id="company" placeholder="Company"
+                            value="{{ old('company') }}" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone (optional)</label>
+                        <input class="w-input" type="tel" name="phone" id="phone"
+                            placeholder="Phone (optional)" value="{{ old('phone') }}">
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="message">What do you want to achieve? (optional)</label>
+                        <textarea class="w-input" name="message" id="message" rows="4"
+                            placeholder="Tell us more about your needs...">{{ old('message') }}</textarea>
+                    </div>
+
+                    <div class="form-field full-width submit-container">
+                        <input type="submit" class="email-btn-demo w-button" value="Request Demo">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

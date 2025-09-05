@@ -221,6 +221,7 @@
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
     </script>
     <script src="{{ asset('js/webflow.js') }}?v={{ filemtime(public_path('js/webflow.js')) }}"></script>
+    <script src="{{ asset('js/home.js') }}?v={{ filemtime(public_path('js/home.js')) }}"></script>
     <script src="https://cdn.prod.website-files.com/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
     <script src="https://cdn.prod.website-files.com/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
     <script src="https://cdn.prod.website-files.com/gsap/3.13.0/CustomEase.min.js" type="text/javascript"></script>
