@@ -15,6 +15,7 @@ return [
     */
 
     'default' => env('MAIL_MAILER', 'log'),
+    'sales_inbox' => env('SALES_INBOX'),
 
     /*
     |--------------------------------------------------------------------------
