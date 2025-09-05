@@ -20,7 +20,7 @@ class IntegrationResource extends Resource
 {
     protected static ?string $model = Integration::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedLink;
 
     protected static ?string $recordTitleAttribute = 'title';
 
