@@ -32,7 +32,7 @@
                 @endif
               </div>
               <div class="choose-text-block">
-                <h4 data-animation="chars" class="choose-title">{{ e($item->title) }}</h4>
+<h4 data-animation="chars" class="choose-title">{!! $item->title !!}</h4>
                 @if($item->description)
                   <p class="choose-short-text">{{ e($item->description) }}</p>
                 @endif

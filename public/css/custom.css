@@ -242,3 +242,15 @@ textarea.w-input:focus {
 .demo-open-btn:hover {
     background-color: #0a5f4f;
 }
+
+.brand-image-block {
+    display: flex;
+    justify-content: center;   /* لتوسيط أفقياً */
+    align-items: center;       /* لتوسيط عمودياً */
+    height: 100%;              /* تأكد من أن له ارتفاع */
+}
+.partner-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
