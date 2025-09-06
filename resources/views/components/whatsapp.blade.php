@@ -1,5 +1,11 @@
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/967700000000?text=مرحبًا%20NLT%20-%20أرغب%20بالتواصل" class="whatsapp-float" target="_blank"
+@php
+    $phone = \App\Models\Setting::getSetting('website_whatsapp', '+601126102050');
+    $msg = urlencode("مرحبًا NLT - أرغب بالتواصل");
+    $link = "https://wa.me/{$phone}?text={$msg}";
+@endphp
+
+<a href="{{ $link }}" class="whatsapp-float" target="_blank"
   rel="noopener" aria-label="Contact on Whastapp">
   <!-- أيقونة واتساب SVG -->
   <svg viewBox="0 0 32 32" aria-hidden="true" class="wa-icon">
@@ -118,7 +124,7 @@
 
 <script>
   (function () {
-    const phone = "967773030069"; // <-- رقمك الدولي
+const phone = "{{ $phone }}";
     const base = "https://wa.me/";
     const preset = "Hello NLT - I would like to contact regarding: ";
     const pageTitle = document.title || "NLT";
