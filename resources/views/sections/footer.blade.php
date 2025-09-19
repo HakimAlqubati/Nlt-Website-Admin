@@ -119,7 +119,29 @@
                 <div class="form-grid">
                     <div class="form-field">
                         <label for="name">Name</label>
-                        <input class="w-input" type="text" name="name" id="name" placeholder="Your name"
+                        <input class="w-input" type="text"Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+    Text(
+      label,
+      style: const TextStyle(color: Colors.white70, fontSize: 14),
+    ),
+    const SizedBox(height: 4),
+    Text(
+      value.toStringAsFixed(0), // أو toStringAsFixed(2) لو تحب أرقام عشرية
+      style: const TextStyle(
+        color: Colors.white,
+        fontSize: 24,          // 👈 حجم أكبر
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    Text(
+      'Default: ${defaultValue.toStringAsFixed(0)}',
+      style: const TextStyle(color: Colors.white38, fontSize: 12),
+    ),
+  ],
+),
+ name="name" id="name" placeholder="Your name"
                             value="{{ old('name') }}" required>
                     </div>
 
@@ -147,6 +169,7 @@
                             placeholder="Tell us more about your needs...">{{ old('message') }}</textarea>
                     </div>
 
+                       
                     <div class="form-field full-width submit-container">
                         <input type="submit" class="email-btn-demo w-button" value="Request Demo">
                     </div>

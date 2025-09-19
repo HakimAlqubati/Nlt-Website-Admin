@@ -17,11 +17,11 @@ class DemoRequestController extends Controller
         }
 
         $data = $request->validate([
-            'name'    => ['required','string','max:120'],
-            'email'   => ['required','email','max:190'],
-            'company' => ['required','string','max:190'],
-            'phone'   => ['nullable','string','max:60'],
-            'message' => ['nullable','string','max:2000'],
+            'name'    => ['required', 'string', 'max:120'],
+            'email'   => ['required', 'email', 'max:190'],
+            'company' => ['required', 'string', 'max:190'],
+            'phone'   => ['nullable', 'string', 'max:60'],
+            'message' => ['nullable', 'string', 'max:2000'],
         ]);
 
         // معلومات مصدر الطلب
@@ -31,9 +31,9 @@ class DemoRequestController extends Controller
         $data['utm_campaign'] = $request->get('utm_campaign');
 
         $demo = DemoRequest::create($data);
+        $to = \App\Models\Setting::first()?->website_email ?? 'hakimahmed123321@gmail.com';
 
         // أرسل تنبيه للإيميل الخاص بالمبيعات
-        $to = config('mail.sales_inbox', env('SALES_INBOX'));
         if ($to) {
             Mail::to($to)->send(new DemoRequestSubmitted($demo));
         }
