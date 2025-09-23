@@ -12,13 +12,13 @@
     <meta
         content="Next Level Tech - Enterprise Solutions. Simplified"
         property="og:description">
-    <meta content="https://workbencherp.com/images/logo/nlt-filled-text.png"
+    <meta content="https://workbencherp.com/images/main-image.png"
         property="og:image">
     <meta content="NLT - Enterprise Solutions. Simplified" property="twitter:title">
     <meta
         content="Next Level Tech - Enterprise Solutions. Simplified"
         property="twitter:description">
-    <meta content="https://workbencherp.com/images/logo/nlt-filled-text.png"
+    <meta content="https://workbencherp.com/images/main-image.png"
         property="twitter:image">
     <meta property="og:type" content="website">
     <meta content="summary_large_image" name="twitter:card">
