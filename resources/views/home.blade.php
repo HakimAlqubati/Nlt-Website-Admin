@@ -6,17 +6,17 @@
     <meta charset="utf-8">
     <title>NLT - Enterprise Solutions. Simplified</title>
     <meta
-        content="Next Level Tech empowers businesses with smart, scalable software solutions — built to streamline operations, boost efficiency, and drive customer success."
+        content="Next Level Tech empowers businesses with smart, scalable software solutions."
         name="description">
     <meta content="NLT - Enterprise Solutions. Simplified" property="og:title">
     <meta
-        content="Next Level Tech empowers businesses with smart, scalable software solutions — built to streamline operations, boost efficiency, and drive customer success."
+        content="Next Level Tech empowers businesses with smart, scalable software solutions."
         property="og:description">
     <meta content="https://workbencherp.com/images/logo/nlt-filled-text.png"
         property="og:image">
     <meta content="NLT - Enterprise Solutions. Simplified" property="twitter:title">
     <meta
-        content="Next Level Tech empowers businesses with smart, scalable software solutions — built to streamline operations, boost efficiency, and drive customer success."
+        content="Next Level Tech empowers businesses with smart, scalable software solutions."
         property="twitter:description">
     <meta content="https://workbencherp.com/images/logo/nlt-filled-text.png"
         property="twitter:image">
