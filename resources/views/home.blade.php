@@ -8,17 +8,17 @@
     <meta
         content="Next Level Tech empowers businesses with smart, scalable software solutions — built to streamline operations, boost efficiency, and drive customer success."
         name="description">
-    <meta content="Gridify - Enterprise Solutions. Simplified" property="og:title">
+    <meta content="NLT - Enterprise Solutions. Simplified" property="og:title">
     <meta
         content="Next Level Tech empowers businesses with smart, scalable software solutions — built to streamline operations, boost efficiency, and drive customer success."
         property="og:description">
-    <meta content="https://cdn.prod.website-files.com/684b9b4dc788be0c325744d7/687e4c9266ec39056dbe84db_10.webp"
+    <meta content="https://workbencherp.com/images/logo/nlt-filled-text.png"
         property="og:image">
-    <meta content="Gridify - Enterprise Solutions. Simplified" property="twitter:title">
+    <meta content="NLT - Enterprise Solutions. Simplified" property="twitter:title">
     <meta
         content="Next Level Tech empowers businesses with smart, scalable software solutions — built to streamline operations, boost efficiency, and drive customer success."
         property="twitter:description">
-    <meta content="https://cdn.prod.website-files.com/684b9b4dc788be0c325744d7/687e4c9266ec39056dbe84db_10.webp"
+    <meta content="https://workbencherp.com/images/logo/nlt-filled-text.png"
         property="twitter:image">
     <meta property="og:type" content="website">
     <meta content="summary_large_image" name="twitter:card">
