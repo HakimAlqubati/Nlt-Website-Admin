@@ -21,6 +21,7 @@ class PartnerResource extends Resource
     protected static ?string $model = Partner::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUsers;
+    protected static string | \UnitEnum | null $navigationGroup = 'Manage Content';
 
     protected static ?string $recordTitleAttribute = 'name';
 

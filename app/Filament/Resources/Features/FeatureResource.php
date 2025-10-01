@@ -21,6 +21,7 @@ class FeatureResource extends Resource
     protected static ?string $model = Feature::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedSparkles;
+    protected static string | \UnitEnum | null $navigationGroup = 'Manage Content';
 
     protected static ?string $recordTitleAttribute = 'title';
 

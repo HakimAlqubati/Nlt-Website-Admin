@@ -21,6 +21,7 @@ class FeatureSectionResource extends Resource
     protected static ?string $model = FeatureSection::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedIdentification;
+    protected static string | \UnitEnum | null $navigationGroup = 'Manage Content';
 
     protected static ?string $recordTitleAttribute = 'title';
 

@@ -15,6 +15,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class ChooseItemResource extends Resource
 {
@@ -23,6 +24,8 @@ class ChooseItemResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedSquares2x2;
 
     protected static ?string $recordTitleAttribute = 'title';
+    protected static string | UnitEnum | null $navigationGroup = 'Manage Content';
+
 
     public static function form(Schema $schema): Schema
     {

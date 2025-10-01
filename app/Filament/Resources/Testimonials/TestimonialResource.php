@@ -21,6 +21,7 @@ class TestimonialResource extends Resource
     protected static ?string $model = Testimonial::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedChatBubbleLeftEllipsis;
+    protected static string | \UnitEnum | null $navigationGroup = 'Manage Content';
 
     protected static ?string $recordTitleAttribute = 'author_name';
 

@@ -21,6 +21,7 @@ class TopSectionResource extends Resource
     protected static ?string $model = TopSection::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedViewColumns;
+    protected static string | \UnitEnum | null $navigationGroup = 'Manage Content';
 
     protected static ?string $recordTitleAttribute = 'title_desktop';
 
