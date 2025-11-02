@@ -31,7 +31,7 @@ class DemoRequestController extends Controller
         $data['utm_campaign'] = $request->get('utm_campaign');
 
         $demo = DemoRequest::create($data);
-        $to = \App\Models\Setting::first()?->website_email ?? 'hakimahmed123321@gmail.com';
+        $to = \App\Models\Setting::first()?->website_email ?? 'nltworkbench@gmail.com';
 
         // أرسل تنبيه للإيميل الخاص بالمبيعات
         if ($to) {
