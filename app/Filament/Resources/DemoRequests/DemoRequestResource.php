@@ -51,6 +51,6 @@ class DemoRequestResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        return static::getModel()::query();
+        return static::getModel()::query()->orderBy('created_at', 'desc');
     }
 }
