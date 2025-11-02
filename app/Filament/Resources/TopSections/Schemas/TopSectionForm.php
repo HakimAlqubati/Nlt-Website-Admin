@@ -3,6 +3,9 @@
 namespace App\Filament\Resources\TopSections\Schemas;
 
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Repeater\TableColumn;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
@@ -43,6 +46,22 @@ class TopSectionForm
                     ->disk('public')
                     ->directory('images/top-sections'),
 
+                Repeater::make('members')->columnSpanFull()
+                    ->table([
+                        TableColumn::make('Name'),
+                        TableColumn::make('Role'),
+                    ])
+                    ->schema([
+                        TextInput::make('name')
+                            ->required(),
+                        Select::make('role')
+                            ->options([
+                                'member' => 'Member',
+                                'administrator' => 'Administrator',
+                                'owner' => 'Owner',
+                            ])
+                            ->required(),
+                    ])
             ]);
     }
 }
