@@ -11,6 +11,7 @@ class DemoRequestController extends Controller
 {
     public function store(Request $request)
     {
+        $email = \App\Models\Setting::getSetting('website_email', 'info@workbencherp.com');
         // honeypot
         if ($request->filled('website')) {
             return back()->with('status', 'demo-requested');
@@ -31,7 +32,7 @@ class DemoRequestController extends Controller
         $data['utm_campaign'] = $request->get('utm_campaign');
 
         $demo = DemoRequest::create($data);
-        $to = \App\Models\Setting::first()?->website_email ?? 'nltworkbench@gmail.com';
+        $to = $email ?? 'nltworkbench@gmail.com';
 
         // أرسل تنبيه للإيميل الخاص بالمبيعات
         if ($to) {
