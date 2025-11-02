@@ -12,7 +12,6 @@ class DemoRequestController extends Controller
     public function store(Request $request)
     {
         $email = \App\Models\Setting::getSetting('website_email', 'info@workbencherp.com');
-        dd($email);
         // honeypot
         if ($request->filled('website')) {
             return back()->with('status', 'demo-requested');
